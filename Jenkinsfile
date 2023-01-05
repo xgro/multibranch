@@ -6,11 +6,11 @@ pipeline {
         stage('Decide Deploy To') {
             steps {
                 script {
-                    if (env.BRANCH_NAME == 'main'){
+                    if (env.BRANCH_NAME =~ 'main'){
                         DEPLOY_TO = 'prod'
-                    } else if (env.BRANCH_NAME == 'dev'){
+                    } else if (env.BRANCH_NAME =~ 'dev'){
                         DEPLOY_TO = 'dev'
-                    } else if (env.BRANCH_NAME == 'stage'){
+                    } else if (env.BRANCH_NAME =~ 'stag*'){
                         DEPLOY_TO = 'stag'
                     }
                 }

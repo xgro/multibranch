@@ -24,7 +24,6 @@ pipeline {
                 echo "BUILD_NUMBER: ${BUILD_NUMBER}"
                 echo "BUILD_TAG: ${BUILD_TAG}"
                 echo "JOB_NAME: ${JOB_NAME}"
-                echo "EXECUTOR_NUMBER: ${EXECUTOR_NUMBER}"
                 echo "WORKSPACE: ${WORKSPACE}"
             }
         }

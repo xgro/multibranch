@@ -17,10 +17,5 @@ pipeline {
                 echo "DEPLOY_TO: ${DEPLOY_TO}"
             }
         }
-        post {
-            always {
-                echo 'post process !'
-            }
-        }
     }
 }
